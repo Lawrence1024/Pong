@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Pong 2.0</title>
+		<link href="https://fonts.googleapis.com/css?family=Audiowide|Press+Start+2P" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="pongStyle.css" />
+		<script src="pongScript.js"></script>
+		<link rel="shortcut icon" href="favicon.ico"/>
+	</head>
+	<body onkeydown="keyDown(event)" onkeyup="keyUp(event)">
+		<div id="gameTitle">Pong <span style="color:red;">2.0</span></div>
+		<div id="scoreKeeper">
+			<div id="player1Score">0</div>
+			<div id="player2Score">0</div>
+			<div id="time">3:00</div>
+		</div>
+		<!--BUTTONS-->
+		<input id = "pVc" class = "playerNum" type = "button" value = "Player vs. Computer" title="You are the white paddle." onclick = "versusComputer()"></input>
+		<input id = "pVp" class = "playerNum" type = "button" value = "Player vs. Player" title="Player 1 controls the white paddle with up the and down arrow keys. | Player 2 controls the green paddle with the &quot;w&quot;  and &quot;s&quot; keys." onclick = "versusPlayer()"></input>
+		<input id = "classic" type = "button" class = "mode" value = "Classic Mode" title="Classic 1v1 Pong match. Highest scorer in 3 minutes wins." onclick = "classicMode(this)"></input>
+		<input id = "crazy" type = "button" class = "mode" value = "Crazy Mode" title="Same as classic but the ball goes faster." onclick = "crazyMode(this)"></input>
+		<input id = "power" type = "button" class = "mode" value = "Powerup Mode" title="Classic but with powerups. Hit the red powerup block with the ball to alter your paddle's length!" onclick = "powerUpMode(this)"></input>
+		<!--GAME SPRITES-->
+		<div id = "player1" class = "paddle"></div>
+		<div id = "player2" class = "paddle"></div>
+		<div id = "computer" class = "paddle"></div>
+		<div id = "ball"></div>
+		<div id = "wall1" class = "wall"></div>
+		<div id= "wall2" class = "wall"></div>
+		<div id = "powerBox"></div>
+		<div id = "goal1" class = "goal"></div>
+		<div id = "goal2" class = "goal"></div>
+		<div id = "netLine"></div>
+		<div id = "end">Thanks For Playing!<span style="font-size:40;color:red;"></br>Refresh to return to main menu.</span></div>
+	</body>
+</html>
